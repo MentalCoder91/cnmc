@@ -1,9 +1,9 @@
-package com.springboot.restapicnmc.ServiceImpl;
+package com.springboot.ntmsdb.ServiceImpl;
 
 
-import com.springboot.restapicnmc.Repository.UserRepository;
-import com.springboot.restapicnmc.Service.UserService;
-import com.springboot.restapicnmc.Model.User;
+import com.springboot.ntmsdb.Repository.UserRepository;
+import com.springboot.ntmsdb.Service.UserService;
+import com.springboot.ntmsdb.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

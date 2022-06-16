@@ -1,6 +1,6 @@
-package com.springboot.restapicnmc.Service;
+package com.springboot.ntmsdb.Service;
 
-import com.springboot.restapicnmc.Model.User;
+import com.springboot.ntmsdb.Model.User;
 
 import java.util.List;
 

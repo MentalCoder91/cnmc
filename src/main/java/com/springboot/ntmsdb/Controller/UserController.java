@@ -1,8 +1,8 @@
-package com.springboot.restapicnmc.Controller;
+package com.springboot.ntmsdb.Controller;
 
 
-import com.springboot.restapicnmc.Model.User;
-import com.springboot.restapicnmc.Service.UserService;
+import com.springboot.ntmsdb.Model.User;
+import com.springboot.ntmsdb.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

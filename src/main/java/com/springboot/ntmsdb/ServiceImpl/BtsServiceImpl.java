@@ -1,8 +1,8 @@
-package com.springboot.restapicnmc.ServiceImpl;
+package com.springboot.ntmsdb.ServiceImpl;
 
-import com.springboot.restapicnmc.Model.BTS;
-import com.springboot.restapicnmc.Repository.BtsRepository;
-import com.springboot.restapicnmc.Service.BtsService;
+import com.springboot.ntmsdb.Model.BTS;
+import com.springboot.ntmsdb.Repository.BtsRepository;
+import com.springboot.ntmsdb.Service.BtsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.springboot.restapicnmc;
+package com.springboot.ntmsdb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
