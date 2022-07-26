@@ -39,8 +39,8 @@ public class BtsController {
         public ResponseEntity<?> getAllBtsByCircleId(@PathVariable String circleId){
 
             List<BTS> listBts = btsService.getBtsByCircleId(circleId);
-            Map<String, Long> mapBts = listBts.stream().collect(Collectors
-                    .groupingBy(BTS::getCircleId,Collectors.counting()));
+
+            Map<String, Long> mapBts = listBts.stream().collect(Collectors.groupingBy(BTS::getCircleId,Collectors.counting()));
 
             return new ResponseEntity<>(mapBts, HttpStatus.OK);
         }

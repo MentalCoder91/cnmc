@@ -19,4 +19,8 @@ public interface BtsRepository extends JpaRepository<BTS,Long> {
     @Query(nativeQuery = true)
     List<DownReportCircleWise> getDownCircleList();
 
+
+
+
+
 }

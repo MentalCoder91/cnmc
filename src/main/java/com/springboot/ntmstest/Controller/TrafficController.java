@@ -1,6 +1,7 @@
 package com.springboot.ntmstest.Controller;
 
 
+import com.springboot.ntmstest.Model.AvgTrafficCircleWise;
 import com.springboot.ntmstest.Model.Traffic;
 import com.springboot.ntmstest.Repository.TrafficRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/traffic")
@@ -37,6 +41,17 @@ public class TrafficController{
        return new ResponseEntity<List<Traffic>>(getGsmTraffic,HttpStatus.OK);
 
     }
+
+    @GetMapping(value = "/getAvgTrafficCircleWise",produces = "application/json")
+    public ResponseEntity<List<AvgTrafficCircleWise>> getAvgTrafficCircleWise(){
+
+        List<AvgTrafficCircleWise> getAvgTraffic = trafficRepository.getAvgTrafficCircleWise();
+
+
+        return new ResponseEntity<List<AvgTrafficCircleWise>>(getAvgTraffic,HttpStatus.OK);
+
+    }
+
 
 
 

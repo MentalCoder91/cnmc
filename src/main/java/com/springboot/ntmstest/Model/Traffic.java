@@ -1,11 +1,34 @@
 package com.springboot.ntmstest.Model;
 
 
+import com.springboot.ntmsdb.Model.DownReportCircleWise;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+
+@NamedNativeQuery(
+        name = "Traffic.getAvgTrafficCircleWise",
+        query ="select circle_id as circleId,round((SUM(data_traffic_mb)/SUM(1)),2) as trafficDataGb, round((SUM(cell_traffic_erl)/SUM(1)),2) as voiceTrafficErl" +
+                "  FROM ntmstest.qos_data_voice_today group by circle_id" +
+                " order by circle_id"
+
+        ,
+        resultSetMapping = "avg_circle_wise_traffic_mapping"
+)
+@SqlResultSetMapping(
+        name = "avg_circle_wise_traffic_mapping",
+        classes = @ConstructorResult(
+                targetClass = AvgTrafficCircleWise.class,
+                columns = {
+                        @ColumnResult(name = "circleId", type = String.class),
+                        @ColumnResult(name = "trafficDataGb", type = Double.class),
+                        @ColumnResult(name = "voiceTrafficErl", type = Double.class),
+
+                }
+        )
+)
 
 @Entity
 @Data
